@@ -21,12 +21,11 @@
   background-color: var(--background-color, #fff);
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
-  font-variation-settings: var(--text-fontweight, 400);
+  font-variation-settings: 'wght' var(--text-fontweight, 400);
   line-height: 21.1px;
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
-
 }
 
 @supports (font-variation-settings: normal) {
@@ -43,7 +42,7 @@
   line-height: 14px;
   color: var(--button-text-color, #fff);
   position: relative;
-  transition: box-shadow .3s ease;
+  transition: box-shadow 0.3s ease;
   overflow: hidden;
   cursor: pointer;
   appearance: none;
@@ -58,12 +57,12 @@
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-color: var(--accent-color, #000);
   transform: translateX(-100%);
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .button__text {
@@ -72,7 +71,7 @@
 .header {
   margin: 6.25rem auto;
   max-inline-size: 700px;
-  border: .125rem solid var(--accent-color, #000);
+  border: 0.125rem solid var(--accent-color, #000);
   background-color: var(--background-color, #fff);
 }
 
@@ -111,7 +110,7 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  row-gap: .875rem;
+  row-gap: 0.875rem;
 }
 
 .theme-menu__item {
@@ -121,23 +120,23 @@
 
 .theme-menu__button {
   font-family: var(--accent-font), Arial, Helvetica, sans-serif;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: .875rem;
+  line-height: 0.875rem;
   text-transform: uppercase;
 
   position: relative;
 
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
   cursor: pointer;
 }
 
 .theme-menu__button:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .theme-menu__button:focus {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -145,28 +144,28 @@
 }
 
 .theme-menu__button:disabled {
-  opacity: .6;
+  opacity: 0.6;
   pointer-events: none;
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   position: absolute;
   inset-block-end: -0.125rem;
 
   display: block;
   inline-size: 0;
-  block-size: .125rem;
+  block-size: 0.125rem;
 
   background-color: var(--accent-color, #000);
-  transition: width .3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 .theme-menu__button:disabled::before {
-  content: '\25B6';
+  content: "\25B6";
   position: absolute;
   inset-inline-start: -1.25rem;
-  animation: pointer-shift .5s ease-in-out infinite alternate;
+  animation: pointer-shift 0.5s ease-in-out infinite alternate;
 }
 
 .main {
@@ -185,7 +184,7 @@
   font-size: 1.125rem;
   line-height: 21.7808px;
   padding: 0.3125rem 0.625rem;
-  border-block-end: .125rem solid var(--accent-color, #000);
+  border-block-end: 0.125rem solid var(--accent-color, #000);
   font-variation-settings: 'wght' var(--title-fontweight, 700);
 }
 
@@ -208,24 +207,20 @@
   inset-inline-end: 1.5625rem;
 
   font-family: var(--accent-font), Arial, Helvetica, sans-serif;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: .875rem;
+  line-height: 0.875rem;
 
-  text-shadow:
-    -0.0625rem 0 var(--background-color, #fff),
-    0 .0625rem var(--background-color, #fff),
-    .0625rem 0 var(--background-color, #fff),
-    0 -0.0625rem var(--background-color, #fff);
+  text-shadow: -0.0625rem 0 var(--background-color, #fff), 0 0.0625rem var(--background-color, #fff), 0.0625rem 0 var(--background-color, #fff), 0 -0.0625rem var(--background-color, #fff);
 
   mix-blend-mode: hard-light;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .content__figure-caption {
-    text-stroke: .0625rem var(--background-color, #fff);
-    -webkit-text-stroke: .0625rem var(--background-color, #fff);
+    text-stroke: 0.0625rem var(--background-color, #fff);
+    -webkit-text-stroke: 0.0625rem var(--background-color, #fff);
     text-shadow: none;
   }
 }
@@ -247,7 +242,7 @@
 }
 
 .filter-grayscale {
-  filter: grayscale(.9);
+  filter: grayscale(0.9);
 }
 
 .filter-blur {
@@ -255,15 +250,15 @@
 }
 
 .filter-invert {
-  filter: invert(.8);
+  filter: invert(0.8);
 }
 
 .card__content {
   padding: 1.5625rem;
-  border-block-start: .125rem solid var(--accent-color, #000);
+  border-block-start: 0.125rem solid var(--accent-color, #000);
 }
 
-.card__content>p:not(:last-of-type) {
+.card__content > p:not(:last-of-type) {
   margin-block-end: 1.6875rem;
 }
 
@@ -274,11 +269,11 @@
 
   display: flex;
   align-items: center;
-  column-gap: .25rem;
+  column-gap: 0.25rem;
 }
 
 .card__icon-button {
-  border: .125rem solid transparent;
+  border: 0.125rem solid transparent;
   inline-size: 2.6875rem;
   block-size: 2.375rem;
 
@@ -289,11 +284,11 @@
 
 .card__icon-button:focus-visible {
   border-color: var(--accent-color, #000);
-  transition: border-color .3s ease;
+  transition: border-color 0.3s ease;
 }
 
 .card__like-button {
-  padding: .625rem 1.0625rem;
+  padding: 0.625rem 1.0625rem;
   inline-size: 8.125rem;
   text-align: center;
 }
@@ -304,15 +299,14 @@
   height: 36px;
 }
 
-
 .memory-button {
   margin: 0 auto;
-  padding: .9375rem 1.25rem;
+  padding: 0.9375rem 1.25rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 
   background-color: var(--background-color, #fff);
   cursor: pointer;
@@ -327,13 +321,13 @@
 .disketa {
   padding: 1.875rem;
   inline-size: 22.125rem;
-  border: .125rem solid var(--accent-color, #000);
+  border: 0.125rem solid var(--accent-color, #000);
   background-color: var(--background-color, #fff);
   color: var(--accent-color, #000);
 }
 
 .disketa::backdrop {
-  background-color: rgba(0, 0, 0, .75);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .disketa-content {
@@ -344,7 +338,7 @@
   column-gap: 1.25rem;
 
   font-family: var(--accent-font), Arial, Helvetica, sans-serif;
-  font-size: .875rem;
+  font-size: 0.875rem;
   text-transform: uppercase;
 }
 
@@ -355,7 +349,7 @@
 }
 
 .disketa-button {
-  padding: .6875rem 1.0625rem;
+  padding: 0.6875rem 1.0625rem;
   inline-size: 100%;
   block-size: 2.375rem;
   background-color: var(--background-color, #fff);
@@ -367,11 +361,11 @@
   }
 
   .content__figure-caption {
-    inset-inline-end: .6875rem;
+    inset-inline-end: 0.6875rem;
   }
 
   .memory-button {
-    padding: .9375rem 1.25rem;
+    padding: 0.9375rem 1.25rem;
     inline-size: 19.375rem;
   }
 
